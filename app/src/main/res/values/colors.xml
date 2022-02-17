@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#921D1B</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#E36C08</color>
+    <color name="primaryDark">#E36C08</color>
+    <color name="primaryLight">#FFCCBC</color>
+    <color name="primary">#cc6107</color>
+    <color name="accent">#FF9800</color>
+    <color name="textIcons">#FFFFFF</color>
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#757575</color>
+    <color name="dividerColor">#BDBDBD</color>
+    <color name="redText">#ff0019</color>
+    <color name="greenText">#28B436</color>
+    <color name="orangeColorICICI">#E36C08</color>
+    <color name="orangelightColorICICI">#caed9332</color>
+    <color name="statusBarColor">#cc6107</color>
+    <color name="black_overlay_for_dialog_bg">#66000000</color>
+    <color name="black">#000000</color>
+    <color name="drkGreenColor">#0A2A12</color>
+    <color name="drkRedColor">#8A0808</color>
+
+</resources>

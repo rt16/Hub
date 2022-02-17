@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_new">
+
+    <fragment
+        android:id="@+id/nav_new"
+        android:name="com.icicisecurities.hub.ui.new_form.NewFormFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_new_form" >
+        <action
+            android:id="@+id/action_nav_new_to_nav_fatca"
+            app:destination="@id/nav_fatca" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_summary"
+        android:name="com.icicisecurities.hub.ui.summary.SummaryFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_summary" />
+
+    <fragment
+        android:id="@+id/nav_fatca"
+        android:name="com.icicisecurities.hub.ui.fatca.FatcaFragment"
+        android:label="@string/fragment_fatca"
+        tools:layout="@layout/fragment_fatca" >
+        <action
+            android:id="@+id/action_nav_fatca_to_nav_summary"
+            app:destination="@id/nav_summary"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_summary"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.icicisecurities.hub.ui.logout.LogoutFragment"
+        android:label="@string/fragment_logout"
+        tools:layout="@layout/fragment_logout" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.icicisecurities.hub.ui.profile.InWardCenterFragment"
+        android:label="@string/inwardCenterSpelling"
+        tools:layout="@layout/fragment_inward_center">
+        <action
+            android:id="@+id/action_nav_profile_to_nav_new"
+            app:destination="@id/nav_new" />
+    </fragment>
+
+
+</navigation>

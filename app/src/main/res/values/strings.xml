@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Hub</string>
+
+    <!--    hints   -->
+    <string name="username_hint">Enter NT ID</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="full_name_hint">Enter Full Name</string>
+    <string name="dob_hint">Enter DOB</string>
+    <string name="pan_hint">Enter PAN</string>
+    <string name="form_no_hint">Enter Form No</string>
+
+
+    <!--    spellings  -->
+    <string name="login_spelling">LOGIN</string>
+    <string name="logout_spelling">LOGOUT</string>
+    <string name="submit_spelling">SUBMIT</string>
+
+
+    <!--    errors  -->
+    <string name="username_error">Username cannot be empty</string>
+    <string name="password_error">Password cannot be empty</string>
+    <string name="minorAccountOpeningIssueError">Applicant is Minor</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="networkErrorSpelling">Network Error</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">ICICI Direct Hub</string>
+    <string name="nav_header_subtitle">Welcome </string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_new">New</string>
+    <string name="menu_summary">Summary</string>
+    <string name="menu_logout">Logout</string>
+    <string name="fragment_fatca">Fatca</string>
+    <string name="menu_home">Form</string>
+    <string name="logoutMessage">Are you sure, you want to Logout!</string>
+    <string name="cancelSpelling">Cancel</string>
+    <string name="ok_spelling">Ok</string>
+    <string name="pleaseWaitSpelling">Please wait</string>
+    <string name="yesIDoSpelling">Yes, I Do !</string>
+    <string name="OopsNoIDontSpelling"> No, I Don\'t !</string>
+    <string name="fatcaPageName">FATCA Details</string>
+    <string name="countryOfBirthTitle">Enter Country Of Birth</string>
+    <string name="placeOfBirthTitle">Enter Place Of Birth</string>
+    <string name="usPersonConfirmation">Are you a US Person ?</string>
+    <string name="countryOfTaxResidencySpelling">Country Of Tax Residency :</string>
+    <string name="tinOneSpelling">Tin Number 1</string>
+    <string name="tinTwoSpelling">Tin Number 2</string>
+    <string name="taxResidentOfOtherCountrySpelling">Are you a Tax Resident in any other country, other than India and US?</string>
+    <string name="countryOfTaxResidencyOtherThanIndiaSpelling">Country Of Residence for tax Purpose</string>
+    <string name="otherThanIndiaSpelling">(Other than India)</string>
+    <string name="sourceOfWealthSpelling">Primary Source of wealth</string>
+    <string name="usIndiciaSpelling">Are you a US Person?</string>
+    <string name="fatca_us_person">Are you a US Person?</string>
+    <string name="fatca_taxable_country_one">Taxable Country 1</string>
+    <string name="fatca_us">USA</string>
+    <string name="fatca_taxable_country_one_tin_hint">Taxable Country 1 TIN</string>
+    <string name="accountNumberHint">TIN 12 digit Account Number</string>
+    <string name="juridictionAddressType">Juridiction Address :</string>
+    <string name="juridictionAddressSelect">Select Address</string>
+    <string name="juridictionAddressSameAsPMT">Same as that of PMT address</string>
+    <string name="juridictionAddressDifferent">Different Address</string>
+    <string name="juridictionAddressLine1">Address line 1</string>
+    <string name="juridictionAddressLine2">Address line 2</string>
+    <string name="juridictionAddressLine3">Address line 3</string>
+    <string name="juridictionAddressCity">City</string>
+    <string name="juridictionAddressState">State</string>
+    <string name="juridictionAddressCountry">Country</string>
+    <string name="juridictionAddressPincode">Pincode</string>
+    <string name="nextSpelling">Next</string>
+
+    <string name="selfSpelling">Self</string>
+    <string name="parentsSpelling">Parent</string>
+
+    <string name="parSpelling">PAR</string>
+    <string name="nriSpelling">NRI</string>
+    <string name="indSpelling">IND</string>
+    <string name="corSpelling">COR</string>
+    <string name="hufSpelling">HUF</string>
+    <string name="formNumberSpelling">Form Number</string>
+    <string name="PANNumberSpelling">PAN Number</string>
+    <string name="statusSpelling">Status</string>
+    <string name="selectFromDateSpelling">Select From Date</string>
+    <string name="selectToDateSpelling">Select To Date</string>
+    <string name="filterSpelling">Filter</string>
+    <string name="noRecordFoundErrorMsg">No Record Found</string>
+    <string name="fragment_logout">Logout</string>
+    <string name="yesSpelling">Yes</string>
+    <string name="noSpelling">No</string>
+    <string name="notification_dialog_confirmation_spelling">Do you want to allow this device to receive the notification on this device ?</string>
+    <string name="all_notifications_spelling">All notifications</string>
+    <string name="invalidDateFormatError">Invalid Date</string>
+    <string name="DOBEmptyError">DOB cannot be empty</string>
+    <string name="need_permission">Need permission to register the device</string>
+    <string name="not_able_to_register_device">This device cannot be registered</string>
+    <string name="submitSpelling">SUBMIT</string>
+    <string name="inward_center_text">Select Inward Center</string>
+    <string name="inwardCenterSpelling">Inward Center</string>
+    <string name="profileSpelling">Profile</string>
+    <string name="emailSpelling">Email</string>
+    <string name="email_alert">I do not want to provide  email id,  I declare that not providing the details above shall be considered that I do not have the same to provide.</string>
+    <string name="email_not_provided">notprovided@notprovided.com</string>
+    <string name="search">Search</string>
+    <string name="acceptedSpelling">Accepted</string>
+    <string name="maleSpelling">Male</string>
+    <string name="femaleSpelling">Female</string>
+    <string name="genderSpelling">Gender</string>
+</resources>

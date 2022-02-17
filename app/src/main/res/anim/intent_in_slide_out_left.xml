@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+This effect will be used for Intents for Slide in.....
+
+e.g. ACtivity 1 to Activity 2 => this effect will be used.....
+-->
+
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300"
+    android:fromXDelta="0"
+    android:toXDelta="-100%p" />

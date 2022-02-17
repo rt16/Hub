@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/curved_dialog"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="auto"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_marginVertical="@dimen/margin_between_widget"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Filter"
+            android:textColor="#444"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:drawablePadding="@dimen/edittext_padding"
+            android:drawableStart="@drawable/ic_filter_black_outline"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:background="@color/accent"
+        android:layout_marginBottom="@dimen/margin_between_widget"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="9.5">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_calender" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fromDateTIL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="From Date"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fromDateTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:longClickable="false"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            />
+
+        <!--<View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primaryDark"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            />-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/toDateTIL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="To Date"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/toDateTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:longClickable="false"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="0.5"
+        android:src="@drawable/search" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchTIL"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Search by Form Number"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchTET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:longClickable="false"
+            android:maxLines="1"
+            android:inputType="number"
+            android:maxLength="10"
+            android:digits="0123456789"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/btnProceed"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Filter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_send_black_24dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

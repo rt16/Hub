@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/login_margin_bottom"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/leftTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="left"
+            android:textColor="@color/primaryText"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/rightTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:textColor="@color/primaryText"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/middleTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/rightTxtView"
+            android:layout_toRightOf="@+id/leftTxtView"
+            android:gravity="center"
+            android:textColor="@color/primaryText"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/login_margin_bottom">
+
+        <TextView
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="left"
+            android:text="Inward Date "
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/submittedDateTxtView"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <TextView
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Status Date "
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/updatedDateTxtView"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rejectedReasonTxtView"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:layout_marginLeft="@dimen/login_margin_bottom"
+        android:layout_marginBottom="@dimen/margin_between_widget"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+</LinearLayout>

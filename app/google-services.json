@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "200485388670",
+    "firebase_url": "https://hub-elimination.firebaseio.com",
+    "project_id": "hub-elimination",
+    "storage_bucket": "hub-elimination.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200485388670:android:51b76b691535515c5f732f",
+        "android_client_info": {
+          "package_name": "com.icicisecurities.hub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200485388670-1ne1f4u1ikqafumfrb403s37bc63ns71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVpU2d5mpMJE71IQ_3otguzwXw95eOqZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200485388670-1ne1f4u1ikqafumfrb403s37bc63ns71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

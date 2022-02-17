@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/formScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:id="@+id/newFormLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/activity_vertical_margin">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/formTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_between_widget">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/formTET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:digits="0123456789"
+            android:hint="Form Number"
+            android:imeOptions="actionNext"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/panTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_between_widget">
+
+            <com.icicisecurities.hub.custom.PANCardEditText
+                android:id="@+id/panET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                android:hint="PAN" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/dobTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dob_hint"
+        style="@style/TextView.InputLabel"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dobDayTIL"
+            android:layout_width="0dp"
+            android:layout_marginBottom="@dimen/margin_between_widget"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dobDayTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:digits="0987654321"
+                android:hint="DD"
+                android:inputType="number"
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dobMonTIL"
+            android:layout_width="0dp"
+            android:layout_marginBottom="@dimen/margin_between_widget"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dobMonTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:digits="0987654321"
+                android:hint="MM"
+                android:inputType="number"
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dobYearTIL"
+            android:layout_width="0dp"
+            android:layout_marginBottom="@dimen/margin_between_widget"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dobYearTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="4"
+                android:digits="0123456789"
+                android:hint="YYYY"
+                android:inputType="number"
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_between_widget"
+        android:text="@string/genderSpelling"/>
+
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin_between_widget">
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maleSpelling"
+            android:layout_marginEnd="@dimen/margin_between_widget"
+            />
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/femaleSpelling"
+            android:layout_marginStart="@dimen/margin_between_widget"
+            />
+    </RadioGroup>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fNameTIL"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/margin_between_widget"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fNameTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:hint="First Name"
+                android:inputType="textCapCharacters"
+                android:maxLength="29"
+                android:singleLine="true"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mNameTIL"
+            android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_between_widget"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mNameTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:hint="Middle Name"
+                android:inputType="textCapCharacters"
+                android:maxLength="29"
+                android:singleLine="true"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:imeOptions="actionNext"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lNameTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_between_widget">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lNameTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:hint="Last Name"
+                android:inputType="textCapCharacters"
+                android:maxLength="29"
+                android:singleLine="true"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/custTypeTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Customer Type"
+        style="@style/TextView.InputLabel"
+        />
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/custTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:spinnerMode="dropdown"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_marginBottom="@dimen/margin_between_widget"
+            android:entries="@array/customerTypeArrayItems"
+            />
+
+
+    <TextView
+        android:id="@+id/productTypeTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Type"
+        style="@style/TextView.InputLabel"
+        />
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/productTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"
+        android:spinnerMode="dropdown"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_marginBottom="@dimen/margin_between_widget"
+        />
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/arnNoTIL"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="@dimen/margin_between_widget">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/arnNoTET"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:maxLines="1"-->
+<!--            android:maxLength="10"-->
+<!--            android:inputType="number"-->
+<!--            android:hint="ARN No (Optional)"-->
+<!--            android:imeOptions="actionNext"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/agentCodeTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_between_widget">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/agentCodeTET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:inputType="text"
+            android:hint="Agent Code"
+            android:imeOptions="actionNext"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+        android:visibility="gone"
+            android:layout_gravity="fill|center_vertical"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/margin_between_widget">
+
+            <TextView
+                android:id="@+id/emailTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailSpelling"
+                android:layout_gravity="start|center_vertical"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/emailCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right|end|center_vertical"
+                android:layout_height="wrap_content"
+                android:text="Not Provided"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_between_widget">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailTET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:hint="Email Id"
+            android:imeOptions="actionNext"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/personal_detail_email_relation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emailRelationTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Relation"
+            style="@style/TextView.InputLabel"
+            />
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/emailRelationSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:spinnerMode="dropdown"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mobileContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mobileTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_between_widget"
+        android:layout_marginTop="@dimen/margin_between_widget">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobileTET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:inputType="phone"
+            android:hint="Mobile No"
+            android:digits="0123456789"
+            android:imeOptions="actionDone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/mobileRelationTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile Relation"
+            style="@style/TextView.InputLabel" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/mobileRelationSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:drawSelectorOnTop="true"
+            style="@style/Widget.AppCompat.Spinner.Underlined" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:text="@string/submitSpelling" />
+
+    </LinearLayout>
+</ScrollView>

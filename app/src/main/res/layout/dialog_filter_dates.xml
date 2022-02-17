@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_overlay_for_dialog_bg">
+    
+    
+    <!-- Dialog Body goes below... -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/curvedcorners_dialog_layout"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin">
+        
+<!--          <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/selectDatesToFilterSpelling"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="@dimen/activity_margin"/>
+        
+        <TextView 
+            style="@style/seperatorTextViewStyle"/> -->
+
+        <TextView
+            android:id="@+id/selectFromDateTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:text="@string/selectFromDateSpelling"/>
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectFromDateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+         <TextView
+            android:id="@+id/selectToDateTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textColor="@android:color/black"
+             android:textStyle="bold"
+            android:text="@string/selectToDateSpelling"/>
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectToDateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/okBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ok_spelling"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+        
+    </LinearLayout>
+    <!-- Dialog body closes above... -->
+
+</ScrollView>

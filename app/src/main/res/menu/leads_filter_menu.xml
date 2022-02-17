@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:title=""
+        android:id="@+id/spinner"
+        android:orderInCategory="100"
+        app:actionViewClass="com.icicisecurities.hub.custom.SearchableSpinner"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_filter_white_outline"
+        android:orderInCategory="100"
+        android:tooltipText="@string/filterSpelling"
+        app:showAsAction="always|collapseActionView"
+        android:title="@string/filterSpelling" />
+    
+</menu>

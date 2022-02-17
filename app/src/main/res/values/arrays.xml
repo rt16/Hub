@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mobileRelationArrayItems">
+        <item>@string/selfSpelling</item>
+        <item>@string/parentsSpelling</item>
+    </string-array>
+
+    <string-array name="customerTypeArrayItems">
+        <item>@string/indSpelling</item>
+        <item>@string/nriSpelling</item>
+    </string-array>
+
+
+    <string-array name="monthsItems">
+        <item>@string/janSpelling</item>
+        <item>@string/febSpelling</item>
+        <item>@string/marSpelling</item>
+        <item>@string/aprSpelling</item>
+        <item>@string/maySpelling</item>
+        <item>@string/junSpelling</item>
+        <item>@string/julSpelling</item>
+        <item>@string/augSpelling</item>
+        <item>@string/sepSpelling</item>
+        <item>@string/octSpelling</item>
+        <item>@string/novSpelling</item>
+        <item>@string/decSpelling</item>
+
+    </string-array>
+
+    <string name="selectMonSpelling">MMM</string>
+    <string name="janSpelling">Jan</string>
+    <string name="febSpelling">Feb</string>
+    <string name="marSpelling">Mar</string>
+    <string name="aprSpelling">Apr</string>
+    <string name="maySpelling">May</string>
+    <string name="junSpelling">Jun</string>
+    <string name="julSpelling">Jul</string>
+    <string name="augSpelling">Aug</string>
+    <string name="sepSpelling">Sep</string>
+    <string name="octSpelling">Oct</string>
+    <string name="novSpelling">Nov</string>
+    <string name="decSpelling">Dec</string>
+    <string name="allSpelling">All</string>
+    <string name="underProcessLeadSpelling">Under Process</string>
+    <string name="verifiedLinkedWebkitSpelling">Verified</string>
+    <string name="rejectedLeadSpelling">Rejected</string>
+
+    <string-array name="leadsFilterArrayItems">
+        <item>@string/allSpelling</item>
+        <item>@string/underProcessLeadSpelling</item>
+        <item>@string/verifiedLinkedWebkitSpelling</item>
+        <item>@string/rejectedLeadSpelling</item>
+    </string-array>
+</resources>

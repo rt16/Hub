@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fatca_fragment"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <!-- ======US Indicia CheckBox=====   -->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/usIndiciaContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/fatcaUsIndiciaChkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="@string/usIndiciaSpelling"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/fatcaUsIndiCiaChkBoxRespomseTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:paddingRight="@dimen/margin_between_widget"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+
+
+        <!-- ======US Indicia CheckBox=====   -->
+
+
+        <!-- Country of Birth GOES BELOW.... -->
+        <LinearLayout
+            android:id="@+id/countryOfBirthContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/countryOfBirthSpellingTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/countryOfBirthTitle"
+                style="@style/TextView.InputLabel"
+                />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/fatcaCountryOfBirthSpenner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:spinnerMode="dropdown"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_marginBottom="@dimen/margin_between_widget"
+                />
+
+        </LinearLayout>
+
+        <!--Below layout will be hidden always if user select india.
+        For any other country it is mandatory to enter country and in that case we will
+        make view visible
+        -->
+
+        <LinearLayout
+            android:id="@+id/placeOfBirthContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/placeOfBirthTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/placeOfBirthTitle"
+                android:layout_marginBottom="@dimen/margin_between_widget">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/placeOfBirthEdtTxt"
+                android:maxLength="60"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <!-- Country of Birth CLOSES ABOVE.... -->
+
+
+        <!-- =====Are you a US person....=====-->
+        <LinearLayout
+            android:id="@+id/bankAccountDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/fatcaUSPersonChkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/fatca_us_person"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/fatcaUspersonChkBoxRespomseTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:paddingRight="@dimen/margin_between_widget"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/fatcaUSPersonContainer">
+
+                <TextView
+                    android:id="@+id/fatcaUSPersonTxtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:paddingRight="@dimen/margin_between_widget"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="italic" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fatca_taxable_country_one"
+                    android:layout_marginBottom="@dimen/margin_between_widget">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fatcaUSPersonEditTextUS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fatca_us"
+                    android:inputType="number"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--                <com.icicidirect.accountopening.custom.SemiBoldTextView-->
+<!--                    android:layout_marginBottom="@dimen/marging_between_widgets"-->
+<!--                    android:layout_marginTop="@dimen/layout_margin"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/fatca_taxable_country_one_tin"-->
+<!--                    android:textColor="@color/black"/>-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="@string/fatca_taxable_country_one_tin_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_between_widget">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fatcaUSPersonEditTextUSTin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+</com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- =====Are you a US person....=====-->
+
+
+        <LinearLayout
+            android:id="@+id/taxResidentOtherDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/fatcaOtherCountryChkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/taxResidentOfOtherCountrySpelling"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/fatcaOtherCountryChkBoxResponseTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:paddingRight="@dimen/margin_between_widget"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:id="@+id/fatcaTaxableCountryTwoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fatcaTacResiCountrySpinnerTxtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/countryOfTaxResidencySpelling"
+                    style="@style/TextView.InputLabel"
+                    />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/fatcaTacResiCountrySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:spinnerMode="dropdown"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_marginBottom="@dimen/margin_between_widget"
+                    />
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/countryOfTaxSpellingTxtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/accountNumberHint"
+                    android:layout_marginBottom="@dimen/margin_between_widget">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fatcaTacResiCountryTinEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Juridiction Address spinner GOES BELOW.... -->
+        <LinearLayout
+            android:id="@+id/fatcaJuridictionAddrContaine"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            >
+
+            <TextView
+                android:id="@+id/fatcaJuridictionAddressSpinnerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/juridictionAddressType"
+                style="@style/TextView.InputLabel"
+                />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/fatcaJuridictionAddressSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:spinnerMode="dropdown"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_marginBottom="@dimen/margin_between_widget"
+                />
+
+        </LinearLayout>
+
+        <!-- Juridiction Address Container GOES BELOW.... -->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/juridictionAdressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- @@@@@@@@@@@ -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fatcaJuridictionAdrLine1Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/juridictionAddressLine1"
+                    android:layout_marginBottom="@dimen/margin_between_widget">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fatcaJuridictionAdrLine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="36"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,/"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- @@@@@@@@@@@ -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fatcaJuridictionAdrLine2Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/juridictionAddressLine2"
+                    android:layout_marginBottom="@dimen/margin_between_widget">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fatcaJuridictionAdrLine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="36"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,/"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <!-- @@@@@@@@@@@ -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fatcaJuridictionAdrLine3Title"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/juridictionAddressLine3"
+                    android:layout_marginBottom="@dimen/margin_between_widget">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fatcaJuridictionAdrLine3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="8"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,/"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- @@@@@@@@@@@ -->
+
+                <TextView
+                    android:id="@+id/fatcaJuridictionCountrySpinnerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/juridictionAddressCountry"
+                    style="@style/TextView.InputLabel"
+                    />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/fatcaJuridictionCountrySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:spinnerMode="dropdown"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_marginBottom="@dimen/margin_between_widget"
+                    />
+
+                <!-- @@@@@@@@@@@ -->
+
+                <TextView
+                    android:id="@+id/fatcaJuridictionStateSpinnerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/juridictionAddressState"
+                    style="@style/TextView.InputLabel"
+                    />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/fatcaJuridictionStateSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:spinnerMode="dropdown"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_marginBottom="@dimen/margin_between_widget"
+                    />
+
+
+                <!-- @@@@@@@@@@@ -->
+                <TextView
+                    android:id="@+id/fatcaJuridictionCitySpinnerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/juridictionAddressCity"
+                    style="@style/TextView.InputLabel"
+                    />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/fatcaJuridictionCitySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:spinnerMode="dropdown"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_marginBottom="@dimen/margin_between_widget"
+                    />
+
+                <!-- @@@@@@@@@@@ -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fatcaJuridictionAdrPinCodeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/juridictionAddressPincode"
+                    android:layout_marginBottom="@dimen/margin_between_widget">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fatcaJuridictionAdrPinCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- @@@@@@@@@@@ -->
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Primary Source of Wealth GOES BELOW.... -->
+        <LinearLayout
+            android:id="@+id/sourceOfWealthContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            >
+
+            <TextView
+                android:id="@+id/sourceOfWealthSpellingTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sourceOfWealthSpelling"
+                style="@style/TextView.InputLabel"
+                />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/fatcaSourceWealthSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:spinnerMode="dropdown"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_marginBottom="@dimen/margin_between_widget"
+                />
+
+        </LinearLayout>
+
+        <!-- FOOTER NEXT BUTTON STARTS BELOW.... -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nxtBtnFATCA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/nextSpelling" />
+
+        <!-- FOOTER NEXT BUTTON CLOSES ABOVE.... -->
+
+    </LinearLayout>
+
+
+</ScrollView>
